@@ -3,12 +3,14 @@
 <head>
 	<title></title>
 	<script lang="javascript">
-	var anInt;
-	anInt = 1;
-	alert(anInt); 
+	function alertMe() {
+	var  inputTag = document.getElementById("msg").value;
+		alert(inputTag);
+	}
 	</script>
-	</head>
-	<body>
-
+	</head>	
+<body>
+<p>click the button: <button onclick="alertMe()"">Clickkkkk</button></p>
+<p>Enter the message: <input id="msg" type="text" placeholder="Enter button message" /></p>
 </body>
 </html>
