@@ -3,7 +3,43 @@
 <head>
 	<title></title>
 	<script lang= "javascript">
-	var i = 0;
-    function buttonClick() {
-        document.getElementById('inc').value = ++i;
+	function for_statement () {
+		for (var i = )
+	}
+	</script>
+ </head>
+<body>
+    <input type="button" value="+" id="inc" onclick="incNumber()"/>
+    <input type="button" value="-" id="dec" onclick="decNumber()"/>
+
+   	<label id="display"></label>
+
+    <script type="text/javascript">
+    var i = 0;
+    function incNumber() {
+            i++;
+        if(i % 2 != 0) {
+        	document.getElementById('display').style.color = 'black';
+        }
+        else {
+        	document.getElementById('display').style.color = 'red';
+        }
+        document.getElementById("display").innerHTML = i;
     }
+
+    function decNumber() {
+            --i;
+            if(i % 2 != 0) {
+        	document.getElementById('display').style.color = 'black';
+        }
+        else {
+        	document.getElementById('display').style.color = 'red';
+        }
+        document.getElementById("display").innerHTML = i;
+    }
+
+    </script>
+
+
+</body>
+
