@@ -10,13 +10,40 @@
 		var grades = [];
 		function AddGrade_click() {
 			console.log("clicked AddGrade_click()");
-			var grade = document.getElementByID("agrade").value;
+			var grade = document.getElementById("agrade").value;
 			// TODO Must convert from string to number
 			// TODO should edit the grade here
 			grades.push(grade);
 			// this adds the grade to the array
+			displayGrades(grades);
 		}
-		function init () {
+		function displayGrades(grades) {
+			var tbody = document.getElementById("gradesdisplay");
+			// tbody is now a reference to the tbody display in the html
+			for(var idx = 0; idx < grades.length; idx++) {
+					var aGrade = grades[idx];
+					var tr = document.createElement("tr");
+					var td = document.createElement("td");
+					tr.appendChild(td);
+					tbody.appendChild(tr);
+		}
+		// every time we call a new item to the list, it goes through displaygrades. 
+	}
+		function curveRequired(grades) {
+			var shouldcurve = true; 
+			for(var idx = 0; idx < grades.length; idx++) {
+					var aGrade = grades[idx];
+			// assumes that we should curve, but not if a specific value is found. in which case it becomes false. 
+			if(aGrade == 100) {
+				shouldcurve = false;
+			}
+			var yesno = (shouldcurve == true) ? "Yes" : "No"; 
+						// this has the yes and no answer and will choos one, displays contents of the variable 
+
+			var div = document.getElementById("curve");
+			divCtrl.innerhtml = "Should curve" + yesno;
+=			// at this point we have what we need to output the curve info to the div in the body 
+		function init() {
 
 		}
 	</script>
@@ -26,17 +53,21 @@
 	<h3>Final Grades</h3>
 	<!-- putting in a div first to create the input and button to add grades-->
 	<div id="entry">
-		<input type="agrade" placeholder="Grades">
+		<input id="agrade" type= "text" placeholder="Grades">
 		<button onclick="AddGrade_click()">Add grade</button>
 		<!-- created AddGrade_click and a function for it to make button -->
 	</div>
+	<p />
 	<div id="grades">
-		<table id= "gradesdisplay">
+		<table style="border:1px solid silver;">
 		<!-- created a table to display grades--> 
 			<thead>
-				<tr><td>Grade></td></tr>
+				<tr><td>Final Grade</td></tr>
 			</thead>
-			<tbody>
+			<tr>score</tr><td></td>
+			<tbody id= "gradesdisplay">
+	<div id="curve">
+	</div>
 			</tbody>
 	</body>
 </html>
