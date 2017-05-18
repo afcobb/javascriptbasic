@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript: Arrays & Objects</title>
+		<!-- function below creates the command for AddGrade_click. displays in f12/dev mode what the output message is-->
+		<!-- we want to define the array up front, so it already exists in the program with no data in it. 
+		var grades creats the grades array - note the square brackets after the variable --> 
+		<!-- var grade gives us the grade and the value thats in there. note that it connects to the input type's id -->
+	<script lang="javascript")>
+		var grades = [];
+		function AddGrade_click() {
+			console.log("clicked AddGrade_click()");
+			var grade = document.getElementByID("agrade").value;
+			// TODO Must convert from string to number
+			// TODO should edit the grade here
+			grades.push(grade);
+			// this adds the grade to the array
+		}
+		function init () {
+
+		}
+	</script>
+</head>
+<!-- body onload="init()" here initializes certain controls when the page loads, important because the page needs the infromation that comes below it in order for an init to run. it needs to be defined by a function, which is above -->
+<body onload="init()">
+	<h3>Final Grades</h3>
+	<!-- putting in a div first to create the input and button to add grades-->
+	<div id="entry">
+		<input type="agrade" placeholder="Grades">
+		<button onclick="AddGrade_click()">Add grade</button>
+		<!-- created AddGrade_click and a function for it to make button -->
+	</div>
+	<div id="grades">
+		<table id= "gradesdisplay">
+		<!-- created a table to display grades--> 
+			<thead>
+				<tr><td>Grade></td></tr>
+			</thead>
+			<tbody>
+			</tbody>
+	</body>
+</html>

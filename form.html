@@ -2,9 +2,35 @@
 <html>
 <head>
 	<title></title>
+	<script lang="javascript">
+	function submit_clicked() {
+		var name = document.getElementById("name").value;
+		var address = document.getElementById("address").value;
+		var citystzip = document.getElementById("citystzip").value;
+		console.log(name, address, citystzip);
+	}
+	</script>
 </head>
 <body>
-	<form method="GET" action="">
+	<form method="GET" action="http://www.google.com">
+		<table>
+			<tr>
+				<td><label>Name:</label></td>
+				<td><input id="name" type= text placeholder="Name"></td>
+			</tr>
+			<tr>
+				<td><label>Address:</label></td>
+				<td><input id="address" type= text placeholder="Address"></td>
+			</tr>
+			<tr>
+			<td><label>City/ST/Zip Code:</label></td>
+				<td><input id="citystzip" type= text placeholder="citystzip"></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center;"><button type="button" onclick="submit_clicked()">Submit</button></td>
+			</tr>
+		</table>
+
 	</form>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-		<script lang= "javascript">}
+		<script lang= "javascript">
 		function button_click() {
 			var nbr = document.getElementById("nbr").
 			value;
@@ -17,6 +17,12 @@
 <body>
 <display id="nbr" type="text" />
 <display id="out" type="text" />
-<button onclick="button_click();">Click me!</button>
+<button onclick="button_click();"></button>
 </body>
 </html> 
+
+	<script lang= "javascript">
+	var i = 0;
+    function buttonClick() {
+        document.getElementById('inc').value = ++i;
+    }
