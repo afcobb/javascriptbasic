@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script lang="javascript">
+		function Hello() {
+			console.log("Print");
+		var Result=document.getElementById("test").value;
+			console.log(Result)
+				myArray.push(parseInt(Result))
+				// converts string to integer
+			console.log(myArray)
+			// adding the array items
+			var total = 0
+		for(var idx = 0; idx < myArray.length; idx++) {
+			var theitem = myArray[idx]
+			console.log(theitem)
+			total = total + theitem
+		}
+		console.log(total)
+		}
+		var myArray = [] 
+	</script>
+</head>
+<body>
+	<input id="test" type="text" placeholder="test">
+	<button onclick="Hello()">Click</button>
+</body>
+</html>
